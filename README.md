@@ -17,19 +17,19 @@ The name of the folder must match the exact version of NW.js you are using. Here
 
 #### Submit
 
-If you have binaries for other environments, please submit a pull request. Cheers!
+If you have binaries for other target platforms, I'd love to add them here. Please submit a pull 
+request.
 
+Here are my own personal compilation notes for the currently available targets:
 
-#### Compilation Notes
-
-##### Windows 7
+##### Compilation Notes for Windows 7
 
 * Installed Python 2.7.11
     * Checked option to add Python directory to path (during install)
     * Added `PYTHON` to system environment variables: `C:\Python27\python.exe`
-* Installed Visual Studio Express for Windows Desktop with Update 4 (6.5GB!!)
-* Installed Node.js 5.5.0
-* Installed the following Node modules (globally):
+* Installed [Visual Studio Express for Windows Desktop with Update 4](https://www.microsoft.com/en-us/download/details.aspx?id=44914) (6.5GB!!)
+* Installed [Node.js 5.5.0](https://nodejs.org/dist/v5.5.0/node-v5.5.0-x64.msi)
+* Installed mandatory Node modules (globally):
     * `npm install -g nw-gyp`
     * `npm install -g node-gyp`
     * `npm install -g node-pre-gyp`
@@ -37,5 +37,16 @@ If you have binaries for other environments, please submit a pull request. Cheer
 * Compile with `node-pre-gyp rebuild --runtime=node-webkit --target=0.13.0-beta4`
 * Go back to project directory
 
-Notes: node-pre-gyp actually picks nw-gyp or node-gyp depending on the target. Both modules must be 
-installed.
+Notes: `node-pre-gyp` actually picks `nw-gyp` or `node-gyp` depending on the target. Both modules must be installed.
+
+
+##### Compilation Notes for Mac OS X
+
+The compiled binary for v0.13.0-beta4 makes NW.js crash. An issue has been filed: https://github.com/nwjs/nw.js/issues/4338
+
+
+##### Useful articles
+
+* https://github.com/nwjs/nw.js/wiki/build-native-modules-with-nw-gyp
+* https://github.com/rwaldron/johnny-five/wiki/Getting-started-with-Johnny-Five-and-Node-Webkit
+* https://github.com/nwjs/nw-gyp
