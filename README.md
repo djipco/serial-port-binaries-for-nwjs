@@ -26,11 +26,16 @@ If you have binaries for other environments, please submit a pull request. Cheer
 
 * Installed Python 2.7.11
     * Checked option to add Python directory to path (during install)
-    * Added PYTHON to environment variables: C:\Python27\python.exe
-* Installed Visual Studio Express for Windows Desktop with Update 4
+    * Added `PYTHON` to system environment variables: `C:\Python27\python.exe`
+* Installed Visual Studio Express for Windows Desktop with Update 4 (6.5GB!!)
 * Installed Node.js 5.5.0
-* Installed the following modules (globally):
-    * npm install -g nw-gyp
-    * npm install -g node-gyp
-    * npm install -g node-pre-gyp
-* Compiled with node-pre-gyp rebuild --runtime=node-webkit --target=0.13.0-beta4
+* Installed the following Node modules (globally):
+    * `npm install -g nw-gyp`
+    * `npm install -g node-gyp`
+    * `npm install -g node-pre-gyp`
+* Change directory to `./node_modules/serialport`
+* Compile with `node-pre-gyp rebuild --runtime=node-webkit --target=0.13.0-beta4`
+* Go back to project directory
+
+Notes: node-pre-gyp actually picks nw-gyp or node-gyp depending on the target. Both modules must be 
+installed.
