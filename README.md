@@ -1,6 +1,10 @@
 ### Precompiled NW.js-compatible binaries for Node's serialport module
 ------------
 
+Important note: there is now a new way to use the serial port inside NW.js projects. Check out: [chrome-apps-serialport](https://github.com/djipco/chrome-apps-serialport)!
+
+------------
+
 Node.js' [serialport](https://www.npmjs.com/package/serialport) module uses native binaries to access the host's serial port. In most standard setups this is completely transparent to the user. However, if you want to use the *serialport* module within an NW.js application, you will need to manually recompile it. While recompiling the module is not impossible, it can be quite intimidating and time consuming your first time around.
 
 So, instead of wasting time, you can simply download the precompiled binary that fits your environment. It basically goes like this. First, you install *serialport* as usual via `npm install serialport`. Then, you move the folder containing the appropriate binary inside the following folder:
